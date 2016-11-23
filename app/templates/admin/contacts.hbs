@@ -3,17 +3,19 @@
  <table class="table table-bordered table-striped">
  	<thead>
  		<tr>
- 			<th>ID</th>
+ 			<th>action</th>
  			<th>E-mail</th>
  			<th>Message</th>
+ 			<th>ID</th>
  		</tr>
  	</thead>
  	<tbody>
  		{{#each model as |contact|}}
 <tr>
-	<th>{{contact.id}}</th>
+	<td><button class="btn btn-danger btn-xs" {{action 'deleteContact' contact}}>Delete</button></td>
 	<td>{{contact.email}}</td>
 	<td>{{contact.message}}</td>
+    <td>{{contact.id}}</td>
 </tr>
  		{{/each}}
  	</tbody>
