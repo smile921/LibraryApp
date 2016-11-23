@@ -16,9 +16,10 @@ Router.map(function() {
   });
 
   this.route('libraries',function() {
-  	// body...
-  	this.route('new');
-  })
+    // body...
+    this.route('new');
+    this.route('edit',{path:'/:library_id/edit'});
+  });
 });
 
 export default Router;

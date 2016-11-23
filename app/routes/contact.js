@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 	},
 	actions:{
 		sendMessage(newContact){		 
-			debugger;			 
+			//debugger;			 
 		 	newContact.save().then(()=> this.transitionTo('index'));
 		},
 		willTransition(){
